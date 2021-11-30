@@ -186,11 +186,11 @@ function! g:MarkdownPasteImage(relpath)
 endfunction
 
 function! g:LatexPasteImage(relpath)
-    execute "normal! i\\includegraphics{" . a:relpath . "}\r\\caption{I"
-    let ipos = getcurpos()
-    execute "normal! a" . "mage}"
-    call setpos('.', ipos)
-    execute "normal! ve\<C-g>"
+    execute "normal! i\\includegraphics[width=\\columnwidth]{" . a:relpath . "}\r"
+    " let ipos = getcurpos()
+    " execute "normal! a" . ""
+    " call setpos('.', ipos)
+    " execute "normal! ve\<C-g>"
 endfunction
 
 function! g:EmptyPasteImage(relpath)
